@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Clinic | Sign In</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="dstyle.css" />
+  <script>tailwind.config = { darkMode: "class" };</script>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100/40 to-blue-200/40 dark:from-gray-800/60 dark:to-gray-900/60 text-gray-900 dark:text-white">
+
+<!-- আগের glass-card সরাসরি <section>‑এ ছিল — সেটাকে ওয়ার‍্যাপারের ভেতরে নিন -->
+<section class="border-gradient">
+  <div class="glass-card w-full max-w-md text-center px-8 py-10 rounded-2xl">
+    <!-- পুরো কার্ডের কনটেন্ট 그대로 রাখুন -->
+    <h1 class="text-4xl font-bold mb-4 tracking-wide text-blue-600">Campus Clinic</h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-10">Choose your login type</p>
+
+    <div class="space-y-4">
+      <a
+  href="login.html"
+  class="btn-role border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white inline-block text-center"
+  data-role="patient"
+>
+  Login as Patient
+</a>
+
+      <a
+  href="Doctor-loginform.html"
+  class="btn-role border-blue-600 text-blue-700 hover:bg-blue-600 hover:text-white inline-block text-center"
+  data-role="patient"
+>
+  Login as Doctor
+</a>
+      <button class="btn-role border-purple-600 text-purple-700 hover:bg-purple-600 hover:text-white" data-role="admin">Login as Admin</button>
+      <a href="register.html" class="block mt-6 text-sm text-blue-600 hover:underline">Create an account</a>
+    </div>
+  </div>
+</section>
+
+
+  <script src="/gscript.js"></script>
+</body>
+</html>

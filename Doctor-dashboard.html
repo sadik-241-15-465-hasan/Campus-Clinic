@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Dashboard | Campus Clinic</title>
+
+  <!-- Icons & Chart.js -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+
+  <!-- Custom style -->
+  <link rel="stylesheet" href="/Doctor-dashboard.css" />
+</head>
+<body>
+  
+
+  <!-- ===== Wrapper ===== -->
+  <div class="wrapper">
+
+    <!-- ===== Sidebar ===== -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <img src="https://i.ibb.co/3d5ZL1h/doctor-avatar.png" alt="Doctor" />
+        <h3>Dr. Marttin Deo</h3>
+        <p>MBBS, FCPS · MD (Medicine), MCPS</p>
+      </div>
+
+      <nav class="menu">
+        <a class="active"><i class="fas fa-table-cells-large"></i> Dashboard</a>
+        <a><i class="fas fa-calendar-check"></i> Appointment</a>
+      
+        <a><i class="fas fa-user"></i> Profile</a>
+      
+       <a id="logoutBtn" href="index.html"><i class="fas fa-right-from-bracket"></i> Logout</a>
+
+      </nav>
+    </aside>
+
+    <!-- ===== Main Area ===== -->
+    <main class="content">
+
+      <!-- Top bar -->
+      <header class="topbar">
+        <h1>Doctor Dashboard</h1>
+
+        <div class="topbar-actions">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+          <span class="icon"><i class="fas fa-bell"></i></span>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search" />
+          </div>
+          <span id="mobileToggle" class="icon mobile-only"><i class="fas fa-bars-staggered"></i></span>
+        </div>
+      </header>
+
+      <!-- Metric cards -->
+      <section class="metrics">
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-user-group"></i></div>
+          <h2>2000+</h2>
+          <p>Total Patient<br /><small>Till Today</small></p>
+        </div>
+
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-user-check"></i></div>
+          <h2>068</h2>
+          <p>Today Patient<br /><small>21 Dec 2021</small></p>
+        </div>
+
+        <div class="metric">
+          <div class="metric-icon"><i class="fas fa-calendar-check"></i></div>
+          <h2>085</h2>
+          <p>Today Appointments<br /><small>21 Dec 2021</small></p>
+        </div>
+      </section>
+
+      <!-- First grid row -->
+      <section class="grid-row">
+
+        <!-- Donut chart -->
+        <div class="card chart-card">
+          <h3>Patients Summary December 2021</h3>
+          <canvas id="donutChart"></canvas>
+          <ul class="legend">
+            <li><span class="dot new"></span> New Patients</li>
+            <li><span class="dot old"></span> Old Patients</li>
+            <li><span class="dot total"></span> Total Patients</li>
+          </ul>
+        </div>
+
+        <!-- Today's appointments -->
+        <div class="card today-card">
+          <h3>Today Appointment</h3>
+          <table>
+            <thead>
+              <tr><th>Patient</th><th>Name/Diagnosis</th><th>Time</th><th></th></tr>
+            </thead>
+            <tbody id="todayList"></tbody>
+          </table>
+          <a class="see-all" href="#">See All</a>
+        </div>
+
+        <!-- Next patient detail -->
+        <div class="card detail-card">
+          <h3>Next Patient Details</h3>
+          <div class="patient-area">
+            <img src="https://i.ibb.co/92pjXjP/patient-avatar.png" alt="avatar" />
+            <div>
+              <h4>Sanath Deo</h4>
+              <p>Health Checkup</p>
+              <p class="pid">Patient ID  022009220005</p>
+            </div>
+          </div>
+
+          <table class="mini-table">
+            <tr><td>D. O. B</td><td>15 January 1989</td></tr>
+            <tr><td>Sex</td><td>Male</td></tr>
+            <tr><td>Weight</td><td>59 kg</td></tr>
+            <tr><td>Last Appointment</td><td>15 Dec 2021</td></tr>
+            <tr><td>Height</td><td>172 cm</td></tr>
+            <tr><td>Reg. Date</td><td>10 Dec 2021</td></tr>
+          </table>
+
+          <h4>Patient History</h4>
+          <div class="tags">
+            <span class="tag yellow">Asthma</span>
+            <span class="tag blue">Hypertension</span>
+            <span class="tag red">Fever</span>
+          </div>
+
+          <div class="actions">
+            <button><i class="fas fa-phone"></i> 0925 035 0102</button>
+            <button><i class="fas fa-file-lines"></i> Document</button>
+            <button><i class="fas fa-comments"></i> Chat</button>
+          </div>
+
+          <p class="note">Last Prescriptions</p>
+        </div>
+      </section>
+
+      <!-- Second grid row -->
+      <section class="grid-row">
+
+        <!-- Patients review -->
+        <div class="card review-card">
+          <h3>Patients Review</h3>
+          <ul>
+            <li><span>Excellent</span><progress max="100" value="85"></progress></li>
+            <li><span>Great</span><progress max="100" value="70"></progress></li>
+            <li><span>Good</span><progress max="100" value="45"></progress></li>
+            <li><span>Average</span><progress max="100" value="30"></progress></li>
+          </ul>
+        </div>
+
+        <!-- Appointment requests -->
+        <div class="card request-card">
+          <h3>Appointment Request</h3>
+          <ul id="requestList"></ul>
+          <a class="see-all" href="#">See All</a>
+        </div>
+
+        <!-- Calendar -->
+        <div class="card calendar-card">
+          <header>
+            <h3>Calander</h3>
+            <span id="monthLabel"></span>
+          </header>
+          <table id="calendar"></table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ===== Scripts ===== -->
+  <script src="/Doctor-dashboard.js"></script>
+</body>
+</html>

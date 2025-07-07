@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Clinic Medical Shop</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous"/>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="medical-shop.css" />
+</head>
+
+<!-- ১) ফুটারের সাথে ওভারল্যাপ আটকাতে pb‑24 যোগ করেছি -->
+<body class="bg-blue-200 dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen flex flex-col pb-24">
+
+  <!-- ========== Header ========== -->
+  <!-- Navbar -->
+  <header class="shadow-md sticky top-0 z-40 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="Diumedicarelogo1.png" alt="Campus Clinic Logo" class="h-8 w-8 object-contain" />
+      <span class="site-title text-xl font-bold text-black dark:text-white">Campus Clinic</span>
+
+      </a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html#home" class="hover:text-blue-500 transition">Home</a>
+        <a href="index.html#about" class="hover:text-blue-500 transition">About</a>
+        <a href="/service.html" class="hover:text-blue-500 transition">Service</a>
+        <a href="/doctor.html" class="hover:text-blue-500 transition">Doctor</a>
+        <a href="index.html#appointment" class="hover:text-blue-500 transition">Appointment</a>
+        <a href="/medical-shop.html" class="hover:text-blue-500 transition">Medical Shop</a>
+        <a href="index.html#contact" class="hover:text-blue-500 transition">Contact</a>
+        <button id="darkToggle" class="ml-4">🌙</button>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuToggle">☰</button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="index.html#home" class="block">Home</a>
+      <a href="index.html#about" class="block">About</a>
+      <a href="/service.html" class="block">Service</a>
+      <a href="/doctor.html" class="block">Doctor</a>
+      <a href="index.html#appointment" class="block">Appointment</a>
+      <a href="/medical-shop.html" class="block">Medical Shop</a>
+      <a href="index.html#contact" class="block">Contact</a>
+    </div>
+  </header>
+
+  <!-- Tagline -->
+  <section class="text-center py-6 border-b border-gray-300 dark:border-gray-700">
+    <p class="text-lg font-semibold text-blue-700 dark:text-blue-400">All your essential medicines in one place</p>
+  </section>
+
+  <!-- ========== Search, Filter & Prescription Upload ========== -->
+  <section class="max-w-7xl mx-auto px-6 py-8 space-y-8">
+
+    <!-- Search & Filters -->
+    <div class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-4 md:space-y-0">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search medicines by name, type, or brand..."
+        class="flex-grow p-3 rounded border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-blue-600 dark:text-white"
+        aria-label="Search Medicines"
+      />
+
+      <select
+        id="categoryFilter"
+        class="p-3 rounded border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-blue-600 dark:text-white"
+        aria-label="Filter by Category"
+      >
+        <option value="">All Categories</option>
+      </select>
+
+      <select
+        id="brandFilter"
+        class="p-3 rounded border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-blue-600 dark:text-white"
+        aria-label="Filter by Brand"
+      >
+        <option value="">All Brands</option>
+      </select>
+
+      <select
+        id="availabilityFilter"
+        class="p-3 rounded border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-blue-600 dark:text-white"
+        aria-label="Filter by Availability"
+      >
+        <option value="">All Availability</option>
+        <option value="in-stock">In Stock</option>
+        <option value="out-of-stock">Out of Stock</option>
+      </select>
+    </div>
+
+    <!-- Prescription Upload Section -->
+    <div class="border border-gray-300 dark:border-gray-700 rounded p-6 bg-gray-50 dark:bg-gray-800">
+      <h2 class="text-xl font-semibold mb-4 text-blue-700 dark:text-blue-400">Upload Prescription</h2>
+
+      <p class="mb-4">Upload your prescription file or enter medicines manually to auto-calculate your order quantity and total price.</p>
+
+      <input
+        type="file"
+        id="prescriptionFile"
+        accept=".txt,.pdf,.jpg,.jpeg,.png"
+        class="mb-4 block w-full text-sm text-gray-500 dark:text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700"
+        aria-label="Upload Prescription File"
+      />
+
+      <textarea
+        id="prescriptionText"
+        rows="4"
+        placeholder="Or paste your prescription text here..."
+        class="w-full p-3 rounded border border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-900 dark:border-blue-600 dark:text-white"
+        aria-label="Paste Prescription Text"
+      ></textarea>
+
+      <button
+        id="processPrescriptionBtn"
+        class="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+        aria-label="Process Prescription"
+      >Process Prescription</button>
+    </div>
+
+  </section>
+
+   <!-- ===== In‑Stock Grid ===== -->
+  <section id="medicineGrid"
+           class="max-w-7xl mx-auto px-6
+                  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+                  gap-8 pb-20
+                  justify-items-center"><!-- 🔹 justify-items-center -->
+    <!-- JS‑এ কার্ড আসবে -->
+  </section>
+  <!-- ===== Out‑of‑Stock Grid ===== -->
+  <section id="outOfStockSection"
+           class="max-w-7xl mx-auto px-6 mt-8 pb-20
+                  hidden rounded-lg"><!-- 🔹 bg‑র ক্লাস সরালাম -->
+
+    <h2 class="text-xl font-semibold mb-6 text-center
+               text-red-600 dark:text-red-400">
+      Out of Stock Medicines
+    </h2>
+
+    <div id="outOfStockList"
+         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+                gap-8 justify-items-center"><!-- 🔹 same layout -->
+      <!-- JS‑এ কার্ড আসবে -->
+    </div>
+  </section>
+
+
+
+  <!-- ========== Cart Summary Modal ========== -->
+  <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-md w-full p-6 relative">
+      <button id="closeCartBtn" class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-red-600" aria-label="Close Cart">&times;</button>
+      <h3 class="text-xl font-bold mb-4 text-blue-700 dark:text-blue-400">Cart Summary</h3>
+      <div id="cartItems" class="space-y-4 max-h-60 overflow-y-auto"></div>
+      <div class="mt-6 flex justify-between items-center font-semibold text-lg">
+        <span>Total:</span>
+        <span id="cartTotalPrice">৳0.00</span>
+      </div>
+      <button id="checkoutBtn" class="mt-6 w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">Checkout</button>
+    </div>
+  </div>
+
+  <!-- ========== Medicine Details Modal ========== -->
+  <div id="medicineModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-lg w-full p-6 relative overflow-y-auto max-h-[80vh]">
+      <button id="closeMedicineModal" class="absolute top-3 right-3 text-gray-700 dark:text-gray-300 hover:text-red-600" aria-label="Close Details">&times;</button>
+      <div id="medicineDetailsContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="fixed bottom-0 left-0 w-full bg-blue-600 text-white z-40 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4
+                flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center space-x-4 text-sm">
+        <span class="font-semibold">Follow Us:</span>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="text-sm mt-3 md:mt-0 text-center md:text-right">
+        Copyright © 2025 Campus Clinic. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="medical-shop.js"></script>
+</body>
+</html>

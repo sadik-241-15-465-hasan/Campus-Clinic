@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | DIU MediCare</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body id="body" class="dark:bg-gray-900 dark:text-white">
+
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-white dark:bg-gray-900 flex items-center justify-center z-50">
+    <div class="loader ease-linear rounded-full border-8 border-t-8 border-blue-500 h-20 w-20"></div>
+  </div>
+
+  <!-- Header/Navbar (Fixed Top) -->
+  <header class="shadow-md fixed top-0 left-0 w-full z-40 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="Diumedicarelogo1.png" alt="Campus Clinic Logo" class="h-8 w-8 object-contain" />
+        <span class="site-title text-xl font-bold text-black dark:text-white">Campus Clinic</span>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-black dark:text-white">
+        <a href="index.html" class="hover:text-blue-500 transition">Home</a>
+        <a href="index.html#about" class="hover:text-blue-500 transition">About</a>
+        <a href="/service.html" class="hover:text-blue-500 transition">Service</a>
+        <a href="/doctor.html" class="hover:text-blue-500 transition">Doctor</a>
+        <a href="index.html#appointment" class="hover:text-blue-500 transition">Appointment</a>
+        <a href="/medical-shop.html" class="hover:text-blue-500 transition">Medical Shop</a>
+        <a href="index.html#contact" class="hover:text-blue-500 transition">Contact</a>
+        <button id="darkToggle" class="ml-4 text-xl">🌙</button>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-2xl">☰</button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2 text-black dark:text-white">
+      <a href="index.html" class="block">Home</a>
+      <a href="index.html#about" class="block">About</a>
+      <a href="/service.html" class="block">Service</a>
+      <a href="/doctor.html" class="block">Doctor</a>
+      <a href="index.html#appointment" class="block">Appointment</a>
+      <a href="/medical-shop.html" class="block">Medical Shop</a>
+      <a href="index.html#contact" class="block">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content-area pt-32 pb-32 px-4">
+
+<div id="navbar-placeholder"></div>
+  <div class="main-content-area">
+
+    <!-- Team Overview -->
+    <section class="section team">
+      <h2>Team Overview</h2>
+      <p class="team-bio">
+        Our team consists of passionate students and developers from Daffodil International University aiming to revolutionize campus healthcare. We combine innovation, technology, and compassion to ensure timely and efficient medical services for everyone.
+      </p>
+
+      <div class="team-grid">
+        <div class="member">
+          <img src="/sadik.jpg" alt="Farhan Ahmed"/>
+          <h3>MD. Sadik Hasan Fahim</h3>
+          <p>Team Leader & Backend Developer</p>
+        </div>
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ayesha Rahman"/>
+          <h3>Ayesha Rahman</h3>
+          <p>UI/UX Designer</p>
+        </div>
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Tanvir Hasan"/>
+          <h3>Tanvir Hasan</h3>
+          <p>Frontend Developer</p>
+        </div>
+        <div class="member">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Sadia Noor"/>
+          <h3>Sadia Noor</h3>
+          <p>QA & Content Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section mission">
+      <h2>Mission & Vision</h2>
+      <div class="mission-content">
+        <img src="https://medcare-prod.s3.me-south-1.amazonaws.com/MHS.jpeg" alt="Dubai Project" />
+        <div>
+          <p><strong>Mission:</strong> Our mission is to simplify medical access for university students and staff with an intuitive platform backed by real-time support and secure medical data management.</p>
+          <p><strong>Vision:</strong> To become the benchmark for digital campus healthcare systems globally, starting with our flagship project in collaboration with Dubai partners.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welfare Activities -->
+    <section class="section welfare">
+      <h2>Welfare Activities</h2>
+      <p>
+        We organize health camps, awareness programs, and mental health sessions across the campus. These include free check-ups, blood donation drives, and COVID-19 precautions in collaboration with local health experts.
+      </p>
+      <img src="https://chblob.icloudhospital.com/thumbnails/medcare-team-e65383e1-36e0-407b-a524-db22a9f947f7.webp" alt="Welfare Activities" />
+    </section>
+
+    <!-- Quality Policy -->
+    <section class="section quality">
+      <h2>Quality Policy</h2>
+      <p>
+        DIU Medicare follows a strict quality assurance policy ensuring each medical case is handled securely and swiftly. We implement encryption protocols and regular audits to maintain platform reliability and data integrity.
+      </p>
+      <img src="https://thumbnails.icloudhospital.com/tr:w-1536,f-webp,q-75/medcare-multi-specialty-hospital-dubai-dubai-20200604085609-56ebe8ee-fcb5-4040-8ed1-c5dfc100b958.webp" alt="Quality Policy" />
+    </section>
+
+    <!-- Present Unit -->
+    <section class="section unit">
+      <h2>Present Unit</h2>
+      <p>
+        We are currently operating inside the DIU Smart Campus with dedicated rooms for consultation, patient waiting, and emergency response. The app complements offline services with appointment management and instant chat support.
+      </p>
+      <img src="https://i.ytimg.com/vi/FfJPehlMS_M/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGFYgXyhlMA8=&rs=AOn4CLCpK2lMCvI1Ip8tOCs1mARKsydgow" alt="Medical Unit" />
+    </section>
+
+    <!-- Ongoing Project -->
+    <section class="section ongoing">
+      <h2>Ongoing Project (Dubai)</h2>
+      <p>
+        We are actively partnering with healthcare stakeholders in Dubai to adapt DIU Medicare's system for multi-language support and international integration. The pilot launch is expected in mid-2025.
+      </p>
+      <img src="https://www.cntc.com.au/wp-content/uploads/2022/04/Lobby-candidates-acup-under-Medicare-a.jpg" alt="Dubai Project" />
+    </section>
+
+    <!-- Testimonial / Feedback -->
+    <section class="section feedback">
+      <h2>Testimonial / Feedback</h2>
+      <div class="testimonial">
+        <blockquote>"DIU Medicare is a revolutionary project. It made my appointment experience smoother than ever. Kudos to the team!"</blockquote>
+        <cite>— Dr. Mahbub Hossain, University Physician</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>"A must-have app for every student! Great UI, fast service, and helpful reminders."</blockquote>
+        <cite>— Nishat Tasnim, B.Sc in CSE, DIU</cite>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (matching index.html) -->
+  <div class="wave-top relative">
+      <div class="circle-frame-wrapper">
+          <div class="circle-frame-inner">
+              <img src="/Diumedicarelogo1.png" alt="ProHealth Logo" onerror="this.onerror=null;this.src='https://placehold.co/150x150/ADD8E6/000000?text=Logo';">
+          </div>
+      </div>
+  </div>
+  <footer class="footer-bg text-gray-800 py-12" style="background-color: #93c5fd;">
+      <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-between items-start">
+              <!-- Column 1: ProHealth Medical & Healthcare Center -->
+              <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                  <h3 class="text-xl font-bold mb-4">ProHealth Medical & Healthcare Center</h3>
+                  <ul class="space-y-2">
+                      <li class="flex items-center">
+                          <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                          <span>123 Anywhere St., Any City 12345</span>
+                      </li>
+                      <li class="flex items-center">
+                          <i class="fas fa-phone-alt text-blue-600 mr-2"></i>
+                          <span>123-456-7890</span>
+                      </li>
+                      <li class="flex items-center">
+                          <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                          <span>hellocallcenter@prohealth.com</span>
+                      </li>
+                  </ul>
+              </div>
+              <!-- Column 2: Quick Links 1 -->
+              <div class="w-full md:w-1/6 mb-8 md:mb-0">
+                  <ul class="space-y-2 mt-8 md:mt-0">
+                      <li><a href="#" class="hover:underline">About Us</a></li>
+                      <li><a href="#" class="hover:underline">Departments</a></li>
+                      <li><a href="#" class="hover:underline">Doctors</a></li>
+                      <li><a href="#" class="hover:underline">Timetable</a></li>
+                      <li><a href="#" class="hover:underline">Appointment</a></li>
+                      <li><a href="#" class="hover:underline">Testimonials</a></li>
+                  </ul>
+              </div>
+              <!-- Column 3: Quick Links 2 -->
+              <div class="w-full md:w-1/6 mb-8 md:mb-0">
+                  <ul class="space-y-2 mt-8 md:mt-0">
+                      <li><a href="#" class="hover:underline">Blog</a></li>
+                      <li><a href="#" class="hover:underline">Contact Us</a></li>
+                      <li><a href="#" class="hover:underline">FAQs</a></li>
+                      <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                      <li><a href="#" class="hover:underline">Terms and Conditions</a></li>
+                  </ul>
+              </div>
+              <!-- Column 4: Be Our Subscribers -->
+              <div class="w-full md:w-1/3">
+                  <h3 class="text-xl font-bold mb-4">Be Our Subscribers</h3>
+                  <p class="mb-4">to get the latest news about health from our experts</p>
+                  <div class="flex">
+                      <input type="email" placeholder="example@email.com" class="p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow">
+                      <button class="bg-blue-500 text-white p-3 rounded-r-lg hover:bg-blue-600 flex items-center justify-center">
+                          Submit <i class="fas fa-arrow-right ml-2"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <div class="footer-bottom text-white py-4">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+          <div class="flex items-center space-x-4 mb-4 md:mb-0">
+              <span>Follow Us</span>
+              <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+          </div>
+          <div class="text-center md:text-right">
+              Copyright © 2024 Pro Health. All rights reserved.
+          </div>
+      </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="about.js" defer></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

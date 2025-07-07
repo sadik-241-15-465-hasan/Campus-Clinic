@@ -1,0 +1,13 @@
+/* dashboard.css */
+
+/* Input focus effect */
+input:focus {
+  outline: none;
+  border-color: #2563eb; /* blue-600 */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Smooth toast */
+#toast {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}

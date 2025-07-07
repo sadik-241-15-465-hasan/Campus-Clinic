@@ -1,0 +1,670 @@
+/* style.css */
+
+
+
+/* Map Section Styling */
+.clinic-map-section {
+  background: linear-gradient(to right, #7fa3db, #88a8ee); /* Blue gradient */
+  min-height: 400px;
+}
+
+.map-container {
+  background-color: #1e293b; /* Dark Blue for contrast */
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Loader animation */
+.loader {
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Fade-in animation */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Delay for staggered animation */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+/* Responsive mobile menu show/hide */
+#mobileMenu.show {
+  display: block;
+}
+
+/* Transition support for dark mode toggle */
+body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+
+/* About section image hover */
+img:hover {
+  transform: scale(1.05);
+}
+
+.department-gradient-border .dept-card-content .rounded-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* image will fill the circle fully */
+  object-position: center;  /* center the image */
+  border-radius: 50%;       /* make image circular */
+}
+
+
+.department-gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 1rem;
+  background: conic-gradient(
+    from 0deg,
+    #2563eb,
+    #3b82f6,
+    #60a5fa,
+    #2563eb
+  );
+  animation: rotate 5s linear infinite;
+  z-index: 0;
+}
+
+.department-gradient-border > .dept-card-content {
+  position: relative;
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dark mode background */
+@media (prefers-color-scheme: dark) {
+  /* 1. Full page background dark */
+  body {
+    background-color: #181f2a !important;
+    color: #e0e0e0;
+  }
+  /* 2. Navbar and its sections white */
+  header.shadow-md,
+  .bg-white,
+  .navbar-section,
+  .max-w-7xl.mx-auto.flex.justify-between.items-center.px-4.py-4 {
+    background-color: #fff !important;
+  }
+  /* 3. Campus Clinic text white in navbar */
+  header .text-2xl.font-bold {
+    color: #fff !important;
+  }
+  /* 4. Hero section headings white */
+  section#home h1,
+  section#home p {
+    color: #fff !important;
+  }
+  /* 5. Our Values section paragraphs white */
+  section .text-gray-600,
+  section .text-gray-700 {
+    color: #fff !important;
+  }
+  /* 6. Review quotes white */
+  .review-card .quote {
+    color: #fff !important;
+  }
+  /* 7. Review card background stays white, text black (except quote) */
+  .review-card.active {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .review-card.active .quote {
+    color: #fff !important;
+  }
+  /* 8. Some Reviews heading blue in dark mode */
+  #reviews h2 {
+    color: #2563eb !important;
+  }
+  /* 9. CTA section subheading white */
+  #appointment .text-gray-600,
+  #health-cta .text-white,
+  #health-cta p {
+    color: #fff !important;
+  }
+  /* 10. FAQ heading white */
+  .max-w-4xl h1,
+  .max-w-4xl h2 {
+    color: #fff !important;
+  }
+}
+
+/* Department icon styling */
+.department-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Department name */
+.department-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+/* Department description */
+.department-desc {
+  color: #555;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+/* Hover effect */
+.department-gradient-border:hover {
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+/* Award Section */
+.awards-gradient-border {
+  position: relative;
+  padding: 2px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: conic-gradient(
+    #2563eb,
+    #3b82f6,
+    #60a5fa,
+    #2563eb
+  );
+  transition: box-shadow 0.4s ease;
+}
+
+.awards-gradient-border:hover {
+  box-shadow: 0 0 15px 3px rgba(37, 99, 235, 0.5);
+}
+
+.awards-card-content {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding: rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.awards-card-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.3);
+  filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.5));
+}
+
+@media (prefers-color-scheme: dark) {
+  .awards-card-content {
+    background-color: #374151;
+    color: #e5e7eb;
+  }
+}
+
+.award-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #2563eb;
+  color: white;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  pointer-events: none;
+  user-select: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.awards-gradient-border:hover .award-badge {
+  opacity: 1;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: auto;
+  bottom: -40px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  transition: color 0.3s ease;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #2563eb;
+}
+
+/*review*/
+/* ========= GLOBAL ========= */
+:root{
+  --primary:#2563eb;            /* Tailwind blue‑600 */
+  --line-offset:280px;          /* inline‑style থেকে বদলাতে পারবেন */
+}
+
+/* ========= TYPOGRAPHY ========= */
+#reviews .name  { @apply font-medium hover:text-blue-600 transition; }
+#reviews .place { @apply text-xs text-slate-500; }
+#reviews .quote { @apply text-lg italic leading-relaxed; }
+
+/* ========= TIMELINE ========= */
+.timeline-line{
+  position:absolute;
+  left:var(--line-offset);
+  top:0;
+  bottom:0;
+  width:1px;
+  background:#dbeafe;           /* blue‑100 */
+  z-index:-1;
+}
+
+/* bullet style */
+.timeline-item{
+  position:relative;
+  cursor:pointer;
+  transition:transform .2s;
+}
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:calc(var(--line-offset) - 5px);
+  top:50%;
+  translate:0 -50%;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#d1d5db;           /* gray‑300 */
+  transition:background .3s;
+}
+.timeline-item:hover{ transform:translateX(2px); }
+.timeline-item:hover::before{ background:var(--primary); }
+
+/* ========= ACTIVE STATES ========= */
+.timeline-item.active::before{ background:var(--primary); }
+.timeline-item.active .client{
+  background:#fff;
+  box-shadow:0 8px 24px rgba(0,0,0,.05);
+  border-radius:12px;
+  padding:14px 16px;
+}
+
+.review-card{
+  display:none;
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .4s, transform .4s;
+}
+.review-card.active{
+  display:block;
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Fix for review card in dark mode: white box, black text */
+@media (prefers-color-scheme: dark) {
+  .review-card.active {
+    background: #fff !important;
+    color: #111 !important;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.10);
+    padding: 1.5rem;
+  }
+  #reviews .name,
+  #reviews .place,
+  #reviews .quote {
+    color: #111 !important;
+  }
+  #reviews h2,
+  #reviews p {
+    color: #e0e0e0 !important;
+  }
+  .footer-bg {
+    background-color: #181f2a !important;
+    color: #e0e0e0 !important;
+  }
+  .footer-bottom {
+    background-color: #111827 !important;
+    color: #e0e0e0 !important;
+  }
+}
+
+/* ========= STAR RATING ========= */
+.stars::before{
+  content:"★★★★★";
+  font-size:1.1rem;
+  letter-spacing:2px;
+  background:linear-gradient(90deg,#facc15 0 100%) left/100% 100% no-repeat;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  display:inline-block;
+}
+
+/* ========= MOBILE OPTIMIZE ========= */
+@media (max-width:639px){
+  .timeline-line{display:none;}
+  .timeline-item::before{display:none;}
+}
+
+
+/* ── CTA কার্ডের ব্যাকগ্রাউন্ড গ্রেডিয়েন্ট ── */
+.cta-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,#9ac7ff 0%, #b9e7ff 60%, #c9f0ff 100%);
+  z-index:0;
+}
+
+/* ── Shield Mask for Image ── */
+.shield-img {
+  display: block;
+  background: #fff;
+  padding: 6px;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  -webkit-clip-path: polygon(0% 18%, 50% 0%, 100% 18%, 100% 82%, 50% 100%, 0% 82%);
+          clip-path: polygon(0% 18%, 50% 0%, 100% 18%, 100% 82%, 50% 100%, 0% 82%);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.blog-card {
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+.dark .blog-card {
+  background-color: #374151;
+  color: #e5e7eb;
+}
+
+.blog-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 1.5rem;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.blog-date {
+  font-size: 0.875rem;
+  color: #2563eb;
+}
+
+.blog-tag {
+  background-color: #dbeafe;
+  color: #2563eb;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+.blog-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.blog-desc {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+.dark .blog-desc {
+  color: #d1d5db;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+}
+
+.author-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+}
+
+.blog-link {
+  color: #2563eb;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.blog-link:hover {
+  text-decoration: underline;
+}
+
+/* Swiper nav colors */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #2563eb;
+}
+.dark .swiper-button-prev,
+.dark .swiper-button-next {
+  color: #60a5fa;
+}
+
+
+/*make APpointment */
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  background-color: #fff;
+  color: #1e293b;
+  outline: none;
+  transition: border 0.3s ease;
+}
+.form-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+.dark .form-input {
+  background-color: #1f2937;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+.dark .form-input:focus {
+  border-color: #60a5fa;
+}
+
+/* Image Frame */
+.border-gradient {
+  background: linear-gradient(135deg, #2563eb, #60a5fa, #3b82f6);
+  padding: 5px;
+  border-radius: 1.5rem;
+}
+.custom-frame img {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-frame img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
+}
+
+/*footer*/
+    <!-- Custom styles -->
+    <style>
+        /* Custom styles will be defined here or linked from a separate CSS file */
+        /* Inter font family */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        /* Styles for the wave effect */
+        .wave-top {
+            position: relative;
+            background-color: #e0f2fe; /* Light blue background for the top section */
+            padding-top: 100px; /* Space for the logo */
+            padding-bottom: 200px; /* Adjusted: More space for the wave and circle */
+            overflow: hidden;
+        }
+
+        .wave-top::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px; /* Height of the wave */
+            background-color: #bfdbfe; /* Background color of the footer section */
+            border-top-left-radius: 50% 100px; /* Creates the wave effect */
+            border-top-right-radius: 50% 100px; /* Creates the wave effect */
+            transform: translateY(50%); /* Moves the wave up to create the curve */
+        }
+
+        .footer-bg {
+            background-color: #bfdbfe; /* Main footer background color */
+        }
+
+        .footer-bottom {
+            background-color: #3b82f6; /* Darker blue for the bottom copyright section */
+        }
+
+        /* Circular frame specific styles */
+        .circle-frame-wrapper {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            /* Adjusted: Position the circle such that its bottom is at the bottom of wave-top */
+            top: calc(100% - 180px); /* 100% is the height of wave-top, 180px is circle height */
+            z-index: 10; /* Ensure it's on top of other elements */
+            width: 180px; /* Size of the outer circle */
+            height: 180px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow for the frame */
+            /* Gradient border using pseudo-element */
+            background: linear-gradient(to right, #6366f1, #a855f7); /* Default background for fallback */
+            padding: 5px; /* Padding to create the border effect */
+        }
+
+        .circle-frame-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 50%;
+            padding: 5px; /* Adjust this for border thickness */
+            background: linear-gradient(to right, #6366f1, #a855f7); /* Gradient for the border */
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1; /* Place behind the main content */
+        }
+
+        .circle-frame-inner {
+            width: 100%;
+            height: 100%;
+            background-color: white; /* Inner circle background */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Ensure image stays within the circle */
+        }
+
+        .circle-frame-inner img {
+            width: 80%; /* Adjust image size within the circle */
+            height: 80%;
+            object-fit: contain; /* Ensure the entire image is visible */
+            border-radius: 50%; /* Keep image circular */
+        }
+
+        
+/* Force dark navbar */
+.dark nav,
+.dark header {
+  background-color: #1a1a1a !important; /* dark background */
+}
+
+/* Navbar text stays white */
+.dark nav a,
+.dark .site-title,
+.dark .nav-link {
+  color: white !important;
+}
+.quote {
+  color: /* normal color */
+}
+
+.dark .quote {
+  color: #fff; /* dark mode e white */
+}
+
+
+
+
+
+        

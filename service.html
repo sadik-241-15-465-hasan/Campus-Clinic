@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Campus Clinic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <link rel="stylesheet" href="service.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body class="bg-[#F0F8FF] dark:bg-[#0F172A] text-gray-800 dark:text-white">
+
+  <!-- Navbar -->
+  <header class="shadow-md sticky top-0 z-40 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="Diumedicarelogo1.png" alt="Campus Clinic Logo" class="h-8 w-8 object-contain" />
+        <span class="site-title text-xl font-bold text-black dark:text-white">Campus Clinic</span>
+      </a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html#home" class="hover:text-blue-500 transition">Home</a>
+        <a href="index.html#about" class="hover:text-blue-500 transition">About</a>
+        <a href="/service.html" class="hover:text-blue-500 transition">Service</a>
+        <a href="/doctor.html" class="hover:text-blue-500 transition">Doctor</a>
+        <a href="index.html#appointment" class="hover:text-blue-500 transition">Appointment</a>
+        <a href="/medical-shop.html" class="hover:text-blue-500 transition">Medical Shop</a>
+        <a href="index.html#contact" class="hover:text-blue-500 transition">Contact</a>
+        <button id="darkToggle" class="ml-4">🌙</button>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuToggle">☰</button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="index.html#home" class="block">Home</a>
+      <a href="index.html#about" class="block">About</a>
+      <a href="/service.html" class="block">Service</a>
+      <a href="/doctor.html" class="block">Doctor</a>
+      <a href=" index.html#appointment" class="block">Appointment</a>
+      <a href="/medical-shop.html" class="block">Medical Shop</a>
+      <a href="index.html#contact" class="block">Contact</a>
+    </div>
+  </header>
+
+  <!-- Animated Header -->
+  <section class="text-center py-12 animate-fade-in">
+    <h1 class="text-4xl font-bold text-blue-700 dark:text-blue-400">Our Services</h1>
+    <p class="text-lg mt-2">We care for your health with dedication and technology</p>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="max-w-4xl mx-auto px-4 mb-10">
+    <div class="flex flex-col md:flex-row gap-4">
+      <input id="searchInput" type="text" placeholder="Search services..." class="flex-1 p-3 rounded border" />
+      <select id="categoryFilter" class="p-3 rounded border">
+        <option value="">All Categories</option>
+        <option value="Diagnostic">Diagnostic</option>
+        <option value="Outdoor">Outdoor</option>
+        <option value="Online">Online</option>
+        <option value="Pharmacy">Pharmacy</option>
+      </select>
+    </div>
+  </section>
+
+  <!-- Service Cards Grid -->
+  <section id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto">
+    <!-- Dynamic cards load from JS -->
+  </section>
+
+  <!-- FAQs -->
+  <section class="max-w-4xl mx-auto px-6 mt-12">
+    <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+      <div class="border rounded">
+        <button class="w-full text-left px-4 py-3 font-medium bg-blue-100 dark:bg-blue-900 toggle-faq">How to book a service?</button>
+        <div class="faq-answer hidden px-4 py-2">Go to the appointment section and select the service, date, and doctor.</div>
+      </div>
+      <div class="border rounded">
+        <button class="w-full text-left px-4 py-3 font-medium bg-blue-100 dark:bg-blue-900 toggle-faq">How fast is ambulance support?</button>
+        <div class="faq-answer hidden px-4 py-2">Ambulance service responds within 5–10 minutes inside campus area.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="mt-16 text-center py-10 bg-blue-50 dark:bg-blue-900">
+    <h2 class="text-2xl font-bold mb-2">Need Urgent Help?</h2>
+    <p class="mb-4">Our team is ready to respond. Don't hesitate to reach out.</p>
+    <a href="tel:+880123456789" class="inline-block px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">
+  📞 Contact Emergency Support
+</a>
+
+  </section>
+
+  <!-- Live Stats -->
+  <section class="text-center py-10 bg-white dark:bg-gray-800 mt-10">
+    <h3 class="text-xl font-bold mb-4">Our Impact</h3>
+    <div class="flex flex-wrap justify-center gap-8">
+      <div class="text-center">
+        <p class="text-3xl font-bold" id="patientsCount">0+</p>
+        <p>Patients Treated</p>
+      </div>
+      <div class="text-center">
+        <p class="text-3xl font-bold" id="supportCount">0/7</p>
+        <p>Support Availability</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="px-6 py-10 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4">Clinic Location</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?..."
+      width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <!-- Chatbot -->
+  <div class="fixed bottom-4 right-4 z-50">
+    <button id="chatBtn" class="bg-blue-600 text-white p-3 rounded-full shadow-lg">💬</button>
+    <div id="chatBox" class="hidden mt-2 bg-white dark:bg-gray-800 border p-4 rounded w-72 shadow-lg">
+      <h4 class="font-semibold mb-2">Campus Clinic Chat</h4>
+      <input type="text" id="chatInput" placeholder="Ask a health question..." class="w-full p-2 rounded border" />
+      <div id="chatReply" class="text-sm mt-2 text-green-500"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white mt-auto py-4">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <span>Follow Us</span>
+        <a href="#"><i class="fab fa-facebook-f hover:text-gray-300"></i></a>
+        <a href="#"><i class="fab fa-twitter hover:text-gray-300"></i></a>
+        <a href="#"><i class="fab fa-instagram hover:text-gray-300"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in hover:text-gray-300"></i></a>
+        <a href="#"><i class="fab fa-youtube hover:text-gray-300"></i></a>
+      </div>
+      <div class="text-center md:text-right">
+        © 2024 Pro Health. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="service.js"></script>
+</body>
+</html>

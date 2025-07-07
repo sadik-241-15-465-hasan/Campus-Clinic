@@ -1,0 +1,109 @@
+/* create-account.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #e9f2ff;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+    padding: 2rem;
+}
+
+.register-card {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+.animated-heading {
+  text-align: center;
+  color: #1976ff;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #333;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.65rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #888;
+  cursor: pointer;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #1976ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background: #125fe0;
+}
+
+.redirect-msg {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.redirect-msg a {
+  color: #1976ff;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .register-card {
+    padding: 1.5rem;
+  }
+
+  .animated-heading {
+    font-size: 1.3rem;
+  }
+}
+

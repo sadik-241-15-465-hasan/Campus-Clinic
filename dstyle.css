@@ -1,0 +1,52 @@
+/* শরীরের ব্যাকগ্রাউন্ড একক রঙে ফিক্স */
+body {
+  @apply bg-[#EAF4FF] dark:bg-[#10141D];
+}
+
+/* গ্রেডিয়েন্ট বর্ডার ওয়ার‍্যাপার */
+.border-gradient {
+  position: relative;
+  border-radius: 1rem;
+  padding: 6px;  /* বর্ডারের পুরুত্ব */
+  background: linear-gradient(135deg, #2563eb 0%, red 50%, #2563eb 100%);
+  display: inline-block;
+  width: 420px;
+  max-width: 90vw;
+  box-sizing: border-box;
+}
+
+/* ভিতরের কার্ড - glassmorphism ব্যাকগ্রাউন্ড */
+.glass-card {
+  border-radius: 1rem;
+  background: white;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 3.5rem 3rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* রোল বাটনগুলো */
+.btn-role {
+  display: block;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: 2px solid transparent; /* শুরুতে বর্ডার ট্রান্সপারেন্ট */
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #2563eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+/* বাটন hover ইফেক্ট */
+.btn-role:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #2563eb; /* বর্ডার কালার হোভার হলে */
+  color: #2563eb;
+  transform: translateY(-2px);
+}

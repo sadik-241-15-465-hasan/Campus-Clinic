@@ -1,0 +1,181 @@
+/* doctor.css */
+
+/* Card styling */
+.doctor-card {
+  background-color: white;
+  border: 2px solid #3b82f6; /* Tailwind blue-500 */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgb(59 130 246 / 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+  color: #1f2937; /* Default dark text (gray-800) */
+}
+
+.doctor-card:hover {
+  box-shadow: 0 8px 20px rgb(59 130 246 / 0.4);
+}
+
+/* Dark mode overrides */
+body.dark .doctor-card {
+  background-color: #1e293b; /* Tailwind gray-800 */
+  border-color: #2563eb; /* Tailwind blue-600 */
+  color: #1f2937; /* Keep text same as light mode */
+}
+
+/* Doctor image circular */
+.doctor-image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2563eb; /* blue-600 */
+  margin-bottom: 1rem;
+}
+
+/* Badge styles */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+/* Status badge colors */
+.badge.available {
+  background-color: #22c55e; /* green-500 */
+  color: white;
+}
+.badge.off-duty {
+  background-color: #ef4444; /* red-500 */
+  color: white;
+}
+
+/* Consultation types */
+.consult-type {
+  margin-top: 0.5rem;
+}
+.consult-type span {
+  margin-right: 0.75rem;
+  font-size: 0.9rem;
+}
+.consult-icon {
+  color: #2563eb;
+  margin-right: 0.3rem;
+}
+
+/* Ratings */
+.rating {
+  color: #fbbf24; /* yellow-400 */
+  margin-bottom: 0.5rem;
+}
+
+/* Book appointment button */
+.book-btn {
+  margin-top: 1rem;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.book-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive text truncation for bio */
+.bio-text {
+  max-height: 4.5rem; /* 3 lines approx */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin-bottom: 0.5rem;
+}
+
+/* Contact button */
+.contact-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.contact-btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Languages */
+.languages {
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  color: #1f2937; /* Keep consistent text color */
+}
+
+/* Location */
+.location {
+  font-size: 0.9rem;
+  color: #3b82f6; /* blue-500 */
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Social Icons */
+.social-icons a {
+  margin-right: 0.5rem;
+  color: #2563eb;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1d4ed8;
+}
+
+.consult-type {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  color: #2563eb; /* blue-600 */
+}
+/* Navbar nav links - light mode default */
+nav a {
+  color: #000; /* black or whatever your default */
+  transition: color 0.3s ease;
+}
+
+/* Navbar nav links - on dark mode */
+.dark nav a {
+  color: #fff; /* white text in dark mode */
+}
+
+/* Optional: hover color in dark mode */
+.dark nav a:hover {
+  color: #60a5fa; /* Tailwind blue-400 */
+}
+.dark .site-title {
+  color: white !important;
+}

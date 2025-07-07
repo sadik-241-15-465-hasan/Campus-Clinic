@@ -1,0 +1,46 @@
+/* ===== Body already styled via Tailwind classes in <body> ===== */
+
+/* Gradient border wrapper */
+.border-gradient{
+  background:linear-gradient(135deg,#2563eb 0%,red 50%,#2563eb 100%);
+  padding:6px;
+  border-radius:1rem;
+  width:420px;
+  max-width:90vw;
+  display:inline-block;
+  box-sizing:border-box;
+}
+
+/* Inner card */
+.glass-card{
+  background:white;                 /* solid white; চাইলে rgba দিয়ে হালকা ট্রান্সপারেন্ট করতে পারো */
+  border-radius:1rem;
+  box-shadow:0 8px 20px rgba(0,0,0,.12);
+  padding:3.5rem 3rem;
+  width:100%;
+  box-sizing:border-box;
+}
+
+/* Buttons (reuse role style) */
+.btn-role{
+  display:block;
+  width:100%;
+  padding:1rem 1.25rem;
+  font-size:1.25rem;
+  font-weight:600;
+  border:2px solid transparent;
+  border-radius:.75rem;
+  transition:all .3s ease;
+}
+
+/* Hover effect handled inline for Login button; generic hover */
+.btn-role:hover{
+  transform:translateY(-2px);
+}
+
+/* Error message text */
+.error-msg{
+  color:#dc2626;     /* red‑600 */
+  font-size:.875rem;
+  margin-top:.25rem;
+}

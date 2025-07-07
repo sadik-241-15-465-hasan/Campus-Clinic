@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Campus Clinic | Login</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="login.css" rel="stylesheet" />
+</head>
+
+<body class="bg-[#EAF4FF] dark:bg-[#10141D] flex items-center justify-center min-h-screen px-4">
+
+  <div class="border-gradient">
+    <div class="glass-card">
+
+      <h1 class="text-3xl font-bold text-center mb-8 text-blue-600">Campus Clinic</h1>
+
+      <form id="loginForm" class="space-y-6" novalidate>
+        <div>
+          <label for="email" class="block mb-2 font-semibold">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="your@diu.edu.bd"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            required
+          />
+          <p id="emailError" class="error-msg hidden">Only @diu.edu.bd emails allowed.</p>
+        </div>
+
+        <div>
+          <label for="password" class="block mb-2 font-semibold">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Your Password"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-600"
+            required
+            minlength="6"
+          />
+          <p id="passError" class="error-msg hidden">Password must be at least 6 characters.</p>
+        </div>
+
+<button
+  type="button"
+  onclick="window.location.href='patient-dashboard.html'"
+  class="btn-role bg-blue-600 text-white hover:bg-blue-700 hover:border-blue-700 border-blue-600"
+>
+  Login
+</button>
+
+      </form>
+
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

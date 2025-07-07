@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Clinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+
+
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 transition duration-500">
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-white dark:bg-gray-900 flex items-center justify-center z-50">
+    <div class="loader ease-linear rounded-full border-8 border-t-8 border-blue-500 h-20 w-20"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="shadow-md sticky top-0 z-40 bg-white dark:bg-gray-800">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+      <a href="#home" class="flex items-center space-x-3">
+        <img src="Diumedicarelogo1.png" alt="Campus Clinic Logo" class="h-8 w-8 object-contain" />
+      <span class="site-title text-xl font-bold text-black dark:text-white">Campus Clinic</span>
+
+      </a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="hover:text-blue-500 transition">Home</a>
+        <a href="#about" class="hover:text-blue-500 transition">About</a>
+        <a href="/service.html" class="hover:text-blue-500 transition">Service</a>
+        <a href="/doctor.html" class="hover:text-blue-500 transition">Doctor</a>
+        <a href="#appointment" class="hover:text-blue-500 transition">Appointment</a>
+        <a href="/medical-shop.html" class="hover:text-blue-500 transition">Medical Shop</a>
+        <a href="#contact" class="hover:text-blue-500 transition">Contact</a>
+        <button id="darkToggle" class="ml-4">🌙</button>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuToggle">☰</button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2">
+      <a href="#home" class="block">Home</a>
+      <a href="#about" class="block">About</a>
+      <a href="#services" class="block">Service</a>
+      <a href="#doctors" class="block">Doctor</a>
+      <a href="#appointment" class="block">Appointment</a>
+      <a href="medical-shop.html" class="block">Medical Shop</a>
+      <a href="#contact" class="block">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="py-20 bg-gradient-to-r from-blue-100 to-blue-300 dark:from-gray-800 dark:to-gray-700">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+<h1 class="text-4xl font-bold animate-fade-in dark:text-white">
+  Your Partner in Health and Wellness
+</h1>
+<p class="mt-4 text-lg animate-fade-in delay-100 dark:text-white">
+  Leading healthcare support system for everyone.
+</p>
+
+     <button
+  onclick="window.location.href='gindex.html'"
+  class="mt-6 px-6 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition"
+>
+  Get Started
+</button>
+    </div>
+  </section>
+
+
+<!-- ====== Our Values Section ====== -->
+ 
+ 
+<section class="py-20 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-12" data-aos="fade-up">Our Values</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <div
+        class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center"
+        data-aos="fade-up" data-aos-delay="100"
+      >
+        <img
+          src="https://www.aspirus.org/Uploads/Public/Images/Values/Vision.png"
+          alt="Compassion"
+          class="w-20 h-20 mb-6 rounded-full object-cover object-center"
+        />
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Compassion</h3>
+      <p class="text-gray-600 dark:text-white mb-6">
+  We treat every patient with empathy, understanding, and respect.
+</p>
+
+   <button
+  onclick="window.open('https://compassionhealthcare.org/quality-healthcare-for-everyone-affordable-accessible-compassion-health-care/', '_blank')"
+  class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300"
+>
+  Learn More
+</button>
+
+
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center"
+        data-aos="fade-up" data-aos-delay="200"
+      >
+        <img
+          src="https://www.nm.org/-/media/northwestern/images/about-us/awards-and-accreditations/cms.png"
+          alt="Excellence"
+          class="w-20 h-20 mb-6 rounded-full object-cover object-center"
+        />
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Excellence</h3>
+      <p class="text-gray-600 dark:text-white mb-6">
+  We maintain the highest standards of care and professionalism.
+</p>
+
+
+        <button onclick="window.open('https://www.dnb.com/business-directory/company-profiles.emc_excellence_medicare_(pty)_ltd.653fe7f9e2042a37b1dba225a71c3a6d.html')"
+          class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300"
+        >
+          Learn More
+        </button>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center"
+        data-aos="fade-up" data-aos-delay="300"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqziLMzSIoTf-Uoq8vyfHEr8Mw7VXk005nw&s"
+          alt="Integrity"
+          class="w-20 h-20 mb-6 rounded-full object-cover object-center"
+        />
+        <h3 class="text-xl font-semibold text-blue-600 mb-3">Integrity</h3>
+       <p class="text-gray-600 dark:text-white mb-6">
+  We act with honesty and transparency in everything we do.
+</p>
+        <button onclick="window.open('https://www.insurewithintegrity.com/aep-6469')"
+          class="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300"
+        >
+          Learn More
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== About Us Section ====== -->
+<section id="about" class="py-20 bg-white dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-10">
+    <!-- Images -->
+    <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4" data-aos="fade-right">
+      <img src="/About us 1.jpg" alt="Doctor 1" class="rounded-xl shadow-md w-full h-auto">
+      <img src="/About us 2.jpg" alt="Doctor 2" class="rounded-xl shadow-md w-full h-auto mt-8">
+    </div>
+
+    <!-- Text -->
+    <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left">
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">About Us</h2>
+      <p class="text-gray-700 dark:text-white mb-6">
+        Campus Clinic is a team of experienced medical professionals dedicated to providing fast, reliable, and accessible care to students and faculty. Our integrated approach ensures your wellness remains a top priority.
+      </p>
+<button onclick="window.location.href='about.html'" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+  More Info
+</button>
+    </div>
+  </div>
+</section>
+
+<!--Department Section Starts Here -->
+<section class="py-20 bg-gray-50 dark:bg-gray-800">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-12" data-aos="fade-up">
+      Our Departments
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <div class="department-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+        <div class="dept-card-content rounded-xl">
+          <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow mb-4">
+            <img src="department.jpg" alt="Cardiology" class="w-16 h-16 object-contain rounded-full" />
+          </div>
+          <h3 class="department-name">Cardiology</h3>
+          <p class="department-desc mb-4">Providing expert heart care with advanced diagnostics and treatments.</p>
+          <a href="https://bdspecializedhospital.com/department/cardiology" class="inline-block px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 text-sm">
+            Explore Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="department-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+        <div class="dept-card-content rounded-xl">
+          <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRONItnff3sp6epNlcBRRFS1If4A-2H5fg1Vxs-HOSjZcZN7NErEOdBXCLInBF5iDz8dY&usqp=CAU" alt="Neurology" class="w-16 h-16 object-contain rounded-full" />
+          </div>
+          <h3 class="department-name">Neurology</h3>
+          <p class="department-desc mb-4">Comprehensive care for brain and nervous system disorders by top specialists.</p>
+          <a href="https://www.evercarebd.com/en/dhaka/specialities/neurology" class="inline-block px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 text-sm">
+            Explore Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="department-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+        <div class="dept-card-content rounded-xl">
+          <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5I6jMhKDM8ro8IxxhX0M6IKRvyPAC3G5ZdA&s" alt="Pediatrics" class="w-16 h-16 object-contain rounded-full" />
+          </div>
+          <h3 class="department-name">Pediatrics</h3>
+          <p class="department-desc mb-4">Dedicated child healthcare services with a compassionate approach.</p>
+          <a href="https://emch.com.bd/department/pediatrics/" class="inline-block px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 text-sm">
+            Explore Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="department-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="400">
+        <div class="dept-card-content rounded-xl">
+          <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow mb-4">
+            <img src="https://vshospitals.b-cdn.net/wp-content/uploads/2022/02/Best-Orthopaedics-Hospital-in-Chennai-Orthopedics-or-orthopedic-surgery-WHAT-IS-ORTHOPEDICS-1024x678.webp" alt="Orthopedics" class="w-16 h-16 object-contain rounded-full" />
+          </div>
+          <h3 class="department-name">Orthopedics</h3>
+          <p class="department-desc mb-4">Advanced treatment for bone, joint, and muscle conditions with expert care.</p>
+          <a href="https://bdspecializedhospital.com/department/orthopedics" class="inline-block px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 text-sm">
+            Explore Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="department-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="500">
+        <div class="dept-card-content rounded-xl">
+          <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow mb-4">
+            <img src="https://www.timesmhl.com/resources/frontEndAsset/resources/img/dept/skin.jpg" alt="Dermatology" class="w-16 h-16 object-contain rounded-full" />
+          </div>
+          <h3 class="department-name">Dermatology</h3>
+          <p class="department-desc mb-4">Expert skin care and treatment for all dermatological conditions.</p>
+          <a href="https://www.evercarebd.com/en/dhaka/specialities/dermatology-venereology" class="inline-block px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 text-sm">
+            Explore Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="department-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="600">
+        <div class="dept-card-content rounded-xl">
+          <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow mb-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsa5Q2-l4eeFKVMhBhrWH4aGu1WPM91I9u4Q&s" alt="Radiology" class="w-16 h-16 object-contain rounded-full" />
+          </div>
+          <h3 class="department-name">Radiology</h3>
+          <p class="department-desc mb-4">State-of-the-art imaging services for accurate diagnosis and treatment planning.</p>
+          <a href="https://buhs.ac.bd/buhs-department-of-radiology-and-imaging-technology/" class="inline-block px-5 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-all duration-300 text-sm">
+            Explore Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Awards Section ====== -->
+<section class="py-20 bg-gradient-to-r from-blue-100 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-blue-700 mb-12" data-aos="fade-up">
+      Our Awards & Achievements
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+
+      <!-- Award 1 -->
+      <div class="awards-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="awards-card-content">
+          <!-- Year Badge -->
+          <div class="award-badge">2023</div>
+
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow mb-4 overflow-hidden">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Award 1" class="w-12 h-12 object-contain" />
+          </div>
+          <h3 class="text-lg font-semibold text-blue-600">Best Medical Institution</h3>
+          <p class="text-sm text-gray-600 mb-0">Awarded in 2023 by National Health Board</p>
+        </div>
+      </div>
+
+      <!-- Award 2 -->
+      <div class="awards-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="awards-card-content">
+          <!-- Year Badge -->
+          <div class="award-badge">2024</div>
+
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow mb-4 overflow-hidden">
+            <img src="/award.webp" alt="Award 2" class="w-12 h-12 object-contain" />
+          </div>
+          <h3 class="text-lg font-semibold text-blue-600">Top 10 Clinics</h3>
+          <p class="text-sm text-gray-600 mb-0">Featured in Global Medical Magazine - 2024</p>
+        </div>
+      </div>
+
+      <!-- Award 3 -->
+      <div class="awards-gradient-border rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 relative" data-aos="fade-up" data-aos-delay="300">
+        <div class="awards-card-content">
+          <!-- Year Badge -->
+          <div class="award-badge">2024</div>
+
+          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow mb-4 overflow-hidden">
+            <img src="/award.webp" alt="Award 3" class="w-12 h-12 object-contain" />
+          </div>
+          <h3 class="text-lg font-semibold text-blue-600">Excellence in Care</h3>
+          <p class="text-sm text-gray-600 mb-0">Recognized for exceptional patient service</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- ░░░░░░░░░░░░  Some Reviews Section  ░░░░░░░░░░░░ -->
+  <!-- line‑offset = left column width (px) -->
+  <section id="reviews" class="py-20 relative" style="--line-offset:280px;">
+    <div class="max-w-6xl mx-auto">
+
+      <!-- হেডিং -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-800 dark:text-blue-600 mt-1 text-sm">Some Reviews</h2>
+
+
+        <p class="uppercase tracking-widest text-blue-600 mt-1 text-sm">
+          Of Our Clients
+        </p>
+      </div>
+
+      <!-- Main grid -->
+      <div class="grid grid-cols-[280px_1fr] gap-20">
+
+        <!-- ╭─ LEFT : Clients list ─╮ -->
+        <ul class="relative space-y-12">
+
+          <!-- vertical line -->
+          <span class="timeline-line"></span>
+
+          <!-- item 1 -->
+          <li class="timeline-item" data-index="0">
+            <div class="client flex items-center gap-4">
+              <img src="https://i.pravatar.cc/70?img=32" alt=""
+                   class="w-14 h-14 rounded-full shadow" />
+              <div>
+                <h4 class="name">Paulo Hubert</h4>
+                <p class="place">New York, USA</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- item 2 (active by default) -->
+          <li class="timeline-item active" data-index="1">
+            <div class="client flex items-center gap-4">
+              <img src="https://i.pravatar.cc/70?img=48" alt=""
+                   class="w-14 h-14 rounded-full shadow" />
+              <div>
+                <h4 class="name">Laurence Vendetta</h4>
+                <p class="place">California, USA</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- item 3 -->
+          <li class="timeline-item" data-index="2">
+            <div class="client flex items-center gap-4">
+              <img src="https://i.pravatar.cc/70?img=14" alt=""
+                   class="w-14 h-14 rounded-full shadow" />
+              <div>
+                <h4 class="name">Cassandra Raul</h4>
+                <p class="place">Florida, USA</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- ╰─ LEFT end ─╯ -->
+
+        <!-- ╭─ RIGHT : Review text ─╮ -->
+        <div class="pl-6 md:pl-12">
+
+          <div class="review-card" data-index="0">
+            <p class="quote">
+              “Amazing service! They took excellent care of my mother and kept us
+              informed every step of the way.”
+            </p>
+            <div class="stars mt-4"></div>
+          </div>
+
+          <div class="review-card active" data-index="1">
+            <p class="quote">
+              “I recently had to bring my child to ProHealth for a minor injury,
+              and I was beyond impressed with the care he received. The
+              pediatrician was great with him and made him feel at ease, and the
+              entire staff was kind and attentive.”
+            </p>
+            <div class="stars mt-4"></div>
+          </div>
+
+          <div class="review-card" data-index="2">
+            <p class="quote">
+              “Efficient, friendly, and professional. I never have to wait long,
+              and the doctors actually listen.”
+            </p>
+            <div class="stars mt-4"></div>
+          </div>
+
+        </div>
+        <!-- ╰─ RIGHT end ─╯ -->
+
+      </div>
+    </div>
+  </section>
+  
+  <!-- ░░░░░░ Section end ░░░░░░ -->
+<!-- ░░░ CTA : Don’t Let Your Health Take a Backseat ░░░ -->
+<section id="health-cta" class="py-20">
+  <div
+    class="cta-card relative flex flex-col md:flex-row items-center
+           rounded-[28px] overflow-hidden mx-auto max-w-6xl">
+
+    <!-- Left : Text -->
+    <div class="z-10 px-10 py-16 md:py-24 md:w-1/2 text-white">
+      <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">
+        Don’t Let Your<br />
+        Health Take a Backseat!
+      </h2>
+      <p class="mt-5 max-w-xs text-sm md:text-base opacity-90">
+        Schedule an appointment with one of our experienced medical professionals today!
+      </p>
+
+      <!-- CTA Button -->
+      <a href="#appointment"
+         class="inline-block mt-6 bg-white text-blue-700 font-semibold
+                px-6 py-3 rounded-lg shadow
+                hover:bg-blue-100 hover:shadow-md transition">
+        Book Appointment
+      </a>
+    </div>
+
+    <!-- Right : Shield Image -->
+    <div class="relative shrink-0 -mt-20 md:mt-0 md:-mr-24">
+      <img
+        src="https://img.freepik.com/free-photo/doctor-with-patient-hospital-doctor-working-office-listening-patient-she-is-explaining-her-symptoms-healtcare-assistance-concept_657921-287.jpg"
+        alt="Doctor consulting patient"
+        class="shield-img w-60 md:w-[300px] aspect-square object-cover"
+      />
+    </div>
+
+    <!-- Decorative curved overlay (bottom‑right) -->
+    <span
+      class="absolute right-0 bottom-0 md:w-[220px] md:h-[220px] w-[160px] h-[160px]
+             rounded-tl-[48px]
+             bg-gradient-to-tr from-blue-300/40 to-transparent">
+    </span>
+  </div>
+</section>
+
+
+<!-- ====== Blog & Updates Section ====== -->
+<section class="py-20 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-blue-700 text-center mb-12" data-aos="fade-up">
+      Blog & Latest Updates
+    </h2>
+
+    <!-- Swiper Container -->
+    <div class="swiper blogSwiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+
+        <!-- Blog Slide 1 -->
+        <div class="swiper-slide blog-card">
+          <img src="/Blog.webp" alt="Blog 1" class="blog-image" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-date">June 25, 2025</p>
+              <span class="blog-tag">Health</span>
+            </div>
+            <h3 class="blog-title">5 Tips for a Healthy Heart</h3>
+            <p class="blog-desc">
+              Learn simple lifestyle changes you can make today to keep your heart strong and healthy.
+            </p>
+            <div class="blog-footer">
+              <div class="author-info">
+                <img src="https://i.pravatar.cc/40?img=1" alt="Author" class="author-img" />
+                <span>Dr. Afsana Rahman</span>
+              </div>
+              <a href="https://www.healthline.com/health/healthy-heart-tips" class="blog-link">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Slide 2 -->
+        <div class="swiper-slide blog-card">
+          <img src="https://img.freepik.com/free-photo/serious-man-consulting-with-young-female-physician-doctor-checkup-meeting-hospital-skilled-general-practitioner-giving-healthcare-medical-advices-patient_657921-853.jpg?semt=ais_hybrid&w=740" alt="Blog 2" class="blog-image" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-date">July 2, 2025</p>
+              <span class="blog-tag">Check-Up</span>
+            </div>
+            <h3 class="blog-title">Importance of Regular Check-ups</h3>
+            <p class="blog-desc">
+              Discover why scheduling regular visits can help catch issues early and improve outcomes.
+            </p>
+            <div class="blog-footer">
+              <div class="author-info">
+                <img src="/Blog.webp" alt="Author" class="author-img" />
+                <span>Dr. Omar Faruk</span>
+              </div>
+              <a href="https://www.betterhealth.vic.gov.au/health/servicesandsupport/regular-health-checks" class="blog-link">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Slide 3 -->
+        <div class="swiper-slide blog-card">
+          <img src="https://raaccountants.com/wp-content/uploads/2023/10/iStock-1311515503.jpg" alt="Blog 3" class="blog-image" />
+          <div class="blog-content">
+            <div class="blog-meta">
+              <p class="blog-date">July 4, 2025</p>
+              <span class="blog-tag">Updates</span>
+            </div>
+            <h3 class="blog-title">New Pharmacy Opening</h3>
+            <p class="blog-desc">
+              We’re excited to announce the launch of our new in-house pharmacy with exclusive offers!
+            </p>
+            <div class="blog-footer">
+              <div class="author-info">
+                <img src="/Blog.webp" alt="Author" class="author-img" />
+                <span>Dr. Shaila Noor</span>
+              </div>
+              <a href="https://daffodilvarsity.edu.bd/department/pharmacy" class="blog-link">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swiper Navigation -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-pagination mt-8"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====== Book an Appointment Section ====== -->
+<section class="py-20 bg-blue-50 dark:bg-gray-900" id="appointment">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Side: Heading, Slogan, Form -->
+      <div class="flex flex-col justify-center h-full text-center">
+        <div class="mb-6">
+          <h2 class="text-3xl font-bold text-blue-700 mb-2" data-aos="fade-up">
+            Book an Appointment
+          </h2>
+          <p class="text-gray-600 mb-6 text-lg" data-aos="fade-up" data-aos-delay="100">
+            Your health is our priority — Schedule your consultation now.
+          </p>
+        </div>
+
+        <form onsubmit="return validateEmail()" class="bg-white dark:bg-gray-800 shadow-md rounded-xl p-6 space-y-5 max-w-md mx-auto text-left" data-aos="fade-up" data-aos-delay="200">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="Full Name" class="form-input" required />
+            <input id="email" type="email" placeholder="Email (@diu.edu.bd)" class="form-input" required />
+
+            <select class="form-input" required>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+
+            <input type="number" placeholder="Age" class="form-input" required />
+            <input type="tel" placeholder="Phone Number" class="form-input" required />
+            <input type="date" class="form-input" required />
+          </div>
+
+          <!-- Department -->
+          <select id="department" class="form-input" required onchange="filterDoctors()">
+            <option value="">Select Department</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="neurology">Neurology</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="dermatology">Dermatology</option>
+          </select>
+
+          <!-- Doctor List -->
+          <select id="doctor" class="form-input" required>
+            <option value="">Select Doctor</option>
+          </select>
+
+          <!-- Preferred Time -->
+          <select class="form-input" required>
+            <option value="">Preferred Time</option>
+            <option value="09:00-10:00 AM">09:00–10:00 AM</option>
+            <option value="11:00-12:00 PM">11:00–12:00 PM</option>
+            <option value="01:00-02:00 PM">01:00–02:00 PM</option>
+            <option value="03:00-04:00 PM">03:00–04:00 PM</option>
+            <option value="05:00-06:00 PM">05:00–06:00 PM</option>
+          </select>
+
+          <textarea rows="4" placeholder="Your Message" class="form-input w-full"></textarea>
+
+          <div class="text-left">
+            <button type="submit"
+              class="px-8 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors duration-300">
+              Confirm Appointment
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right Side: Framed Image -->
+      <div class="hidden md:flex justify-center" data-aos="fade-left" data-aos-delay="300">
+        <div class="relative w-full max-w-md mx-auto custom-frame">
+          <div class="rounded-3xl border-gradient p-1">
+            <img src="/make appointment.jpg" alt="Treatment Illustration"
+              class="rounded-2xl w-full h-auto object-cover" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Doctor Filtering Script -->
+<script>
+  const doctors = {
+    cardiology: ["Dr. Rahman (Cardiologist)", "Dr. Afsana (Cardiologist)"],
+    neurology: ["Dr. Amin (Neurologist)", "Dr. Nazmul (Neuro Specialist)"],
+    orthopedics: ["Dr. Sabila (Orthopedic)", "Dr. Hasan (Bone Specialist)"],
+    dermatology: ["Dr. Nusaiba (Skin Specialist)", "Dr. Farhan (Dermatologist)"]
+  };
+
+  function filterDoctors() {
+    const dept = document.getElementById("department").value;
+    const doctorSelect = document.getElementById("doctor");
+    doctorSelect.innerHTML = '<option value="">Select Doctor</option>';
+
+    if (dept && doctors[dept]) {
+      doctors[dept].forEach(doctor => {
+        const option = document.createElement("option");
+        option.value = doctor;
+        option.textContent = doctor;
+        doctorSelect.appendChild(option);
+      });
+    }
+  }
+</script>
+
+
+<!-- JS: Validate DIU Email -->
+<script>
+  function validateEmail() {
+    const emailInput = document.getElementById("email");
+    const email = emailInput.value.trim();
+    if (!email.endsWith("@diu.edu.bd")) {
+      alert("Only @diu.edu.bd email addresses are allowed.");
+      emailInput.focus();
+      return false;
+    }
+    return true;
+  }
+</script>
+
+
+  <!-- FAQ Section -->
+  <section class="max-w-4xl mx-auto px-4 py-16">
+    <h2 class="text-center text-sm text-blue-500 font-semibold uppercase">What People</h2>
+ <h1 class="text-center text-4xl font-bold text-gray-800 dark:text-white mb-12">
+  Usually Asked
+</h1>
+
+
+    <div id="faq" class="space-y-4">
+      <!-- FAQ items added by JavaScript -->
+    </div>
+  </section>
+
+  <!-- Logo Section -->
+  <section class="bg-white py-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 px-4 items-center justify-items-center grayscale opacity-70">
+      <img src="/icon 1.png" alt="Medical Logo" class="h-12 object-contain"/>
+      <img src="/icon 2.png" alt="DrugStore" class="h-12 object-contain"/>
+      <img src="/icon 3.png" alt="Medical Logo 2" class="h-12 object-contain"/>
+      <img src="/icon 4.png" alt="Hospital" class="h-12 object-contain"/>
+      <img src="/icon 5.png" alt="Pharmacy" class="h-12 object-contain"/>
+      <img src="/icon 6.png" alt="Pharmacy+" class="h-12 object-contain"/>
+      <img src="icon 7.png" alt="Medical Solutions" class="h-12 object-contain"/>
+      <img src="icon 8.png" alt="Pharmacy Tagline" class="h-12 object-contain"/>
+      <img src="/icon 9.png" alt="Healthcare" class="h-12 object-contain"/>
+    </div>
+  </section>
+<!-- Contact Section -->
+<section id="contact" class="bg-gradient-to-br from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-blue-800 dark:text-white ">Contact Us</h2>
+      <p class="text-gray-600 dark:text-gray-300 mt-2">We’re here to help and answer any question you might have</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      
+      <!-- Left: Contact Info & Map -->
+      <div class="space-y-8">
+        <!-- Info Cards -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 flex items-center gap-4">
+          <i class="fas fa-map-marker-alt text-2xl text-blue-600"></i>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Address</h4>
+            <p class="text-gray-600 dark:text-gray-300">DIU Smart City, Ashulia, Dhaka, Bangladesh</p>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 flex items-center gap-4">
+          <i class="fas fa-phone-alt text-2xl text-blue-600"></i>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Phone</h4>
+            <p class="text-gray-600 dark:text-gray-300">+880 1234-567890</p>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 flex items-center gap-4">
+          <i class="fas fa-envelope text-2xl text-blue-600"></i>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-800 dark:text-white">Email</h4>
+            <p class="text-gray-600 dark:text-gray-300">support@campusclinic.com</p>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <iframe class="w-full h-64 rounded-xl shadow-lg" 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9021668810927!2d90.32184997420476!3d23.750885588705675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1575d3ec9d9%3A0xbba1a70fdc38c6a9!2sDaffodil%20International%20University!5e0!3m2!1sen!2sbd!4v1681234567890" 
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div>
+        <form id="contactForm" class="backdrop-blur-md bg-white/60 dark:bg-gray-800/60 border border-blue-200 dark:border-gray-600 p-8 rounded-2xl shadow-xl space-y-6">
+          <h3 class="text-2xl font-semibold text-blue-800 dark:text-white mb-4">📝 Send Us a Message</h3>
+
+          <div>
+            <label class="block text-sm text-gray-700 dark:text-gray-300">Full Name</label>
+            <input type="text" name="name" class="w-full p-3 mt-1 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-blue-500" required>
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-700 dark:text-gray-300">Email Address</label>
+            <input type="email" name="email" class="w-full p-3 mt-1 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-blue-500" required>
+          </div>
+
+          <div>
+            <label class="block text-sm text-gray-700 dark:text-gray-300">Your Message</label>
+            <textarea name="message" rows="4" class="w-full p-3 mt-1 border rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-blue-500" required></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-md transition-all">
+            📤 Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer E -->
+
+<!-- Footer E -->
+
+<!-- Scroll to Top Button (Right Side Fixed) -->
+<button onclick="scrollToTop()" id="scrollTopBtn" 
+        class="fixed bottom-5 right-5 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<div class="wave-top relative">
+    <!-- Circular frame positioned absolutely within wave-top -->
+    <div class="circle-frame-wrapper">
+        <div class="circle-frame-inner">
+            <!-- Placeholder for your logo image -->
+            <img src="/Diumedicarelogo1.png" alt="ProHealth Logo"
+                onerror="this.onerror=null;this.src='https://placehold.co/150x150/ADD8E6/000000?text=Logo';">
+        </div>
+    </div>
+</div>
+
+<footer class="footer-bg text-gray-800 py-12">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-between items-start">
+
+            <!-- Column 1 -->
+            <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                <h3 class="text-xl font-bold mb-4">Campus Clinic|DIU</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                        <span>DIU Smart City, Ashulia, Dhaka, Bangladesh</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone-alt text-blue-600 mr-2"></i>
+                        <span>123-456-7890</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                        <span>campusclinic_diu@diu.edu.bd</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Column 2: Quick Links 1 -->
+            <div class="w-full md:w-1/6 mb-8 md:mb-0">
+                <ul class="space-y-2 mt-8 md:mt-0">
+                    <li><a href="/about.html" class="hover:underline">About Us</a></li>
+                    <li><a href="#our-departments" class="hover:underline">Departments</a></li>
+                    <li><a href="/doctor.html" class="hover:underline">Doctors</a></li>
+                    <li><a href="/timetable.html" class="hover:underline">Timetable</a></li>
+                    <li><a href="#appointment" class="hover:underline">Appointment</a></li>
+                    <li><a href="/testimonials.html" class="hover:underline">Testimonials</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Quick Links 2 -->
+            <div class="w-full md:w-1/6 mb-8 md:mb-0">
+                <ul class="space-y-2 mt-8 md:mt-0">
+                    <li><a href="#Blog" class="hover:underline">Blog</a></li>
+                    <li><a href="#contact" class="hover:underline">Contact Us</a></li>
+                    <li><a href="#faq" class="hover:underline">FAQs</a></li>
+                    <li><a href="/privacy-policy.html" class="hover:underline">Privacy Policy</a></li>
+                    <li><a href="/terms.html" class="hover:underline">Terms and Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Subscription -->
+            <div class="w-full md:w-1/3">
+                <h3 class="text-xl font-bold mb-4">Be Our Subscribers</h3>
+                <p class="mb-4">to get the latest news about health from our experts</p>
+                <div class="flex">
+                    <input type="email" placeholder="example@email.com"
+                        class="p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow">
+                    <button
+                        class="bg-blue-500 text-white p-3 rounded-r-lg hover:bg-blue-600 flex items-center justify-center">
+                        Submit <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+
+<!-- Scroll to Top Function -->
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+    <!-- Bottom Copyright Section -->
+    <div class="footer-bottom text-white py-4">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <span>Follow Us</span>
+<a href="https://facebook.com" target="_blank" class="text-white hover:text-gray-300"><i class="fab fa-facebook-f"></i></a>
+<a href="https://twitter.com" target="_blank" class="text-white hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+<a href="https://instagram.com" target="_blank" class="text-white hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+<a href="https://linkedin.com" target="_blank" class="text-white hover:text-gray-300"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://youtube.com" target="_blank" class="text-white hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+
+            </div>
+            <div class="text-center md:text-right">
+                Copyright © 2024 Pro Health. All rights reserved.
+            </div>
+        </div>
+    </div>
+
+  <!-- Footer End -->
+
+      <!--Java Script All Link -->
+
+  <!-- More Sections (About, Services, etc.) can go here -->
+  <script src="script.js" defer></script>
+
+  <!-- AOS Animation Script (if not already included) -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
+<!--Blog part er -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+  new Swiper(".blogSwiper", {
+    loop: true,
+    spaceBetween: 24,
+    speed: 700,
+    slidesPerView: 1,
+    pagination: { el: ".swiper-pagination", clickable: true },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    },
+  });
+</script
+
+</body>
+</html>
